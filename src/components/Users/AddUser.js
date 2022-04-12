@@ -41,6 +41,8 @@ const AddUser = (props) => {
     setError(null);
   };
   return (
+/*      instead of using a div we could use a native JavaScript array [] if we do that, we do get a warning because whenever you're 
+    working with an array of JSX elements React wants a key on every element */
     <div>
       {error && (
         <ErrorModal
