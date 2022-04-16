@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import classes from "./AddUser.module.css";
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 const AddUser = (props) => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
@@ -43,7 +44,7 @@ const AddUser = (props) => {
   return (
 /*      instead of using a div we could use a native JavaScript array [] if we do that, we do get a warning because whenever you're 
     working with an array of JSX elements React wants a key on every element */
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           title={error.title}
@@ -70,7 +71,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 
